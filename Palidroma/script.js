@@ -11,7 +11,7 @@ var parola_palindroma = palindromo(parola_utente);
 if(parola_palindroma === parola_utente){
     console.log(parola_palindroma + " è un palindromo");
 }else{
-    console.log("undefined");
+    console.log("La parola non è un palindromo");
 }
 
 
@@ -23,7 +23,7 @@ function palindromo(word){
    var letter = word.length - 1;
    var total = "";
    for(var i = letter; i >= 0; i--){
-       var single = letter[i];
+       var single = word[i];
        total += single;
    }
    return total;
