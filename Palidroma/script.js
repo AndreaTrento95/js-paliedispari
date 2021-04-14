@@ -3,23 +3,28 @@
 
 // Chiedo all'utente di inserire una parola
 var parola_utente = prompt("Inserisci una parola");
+/* console.log(parola_utente.length); */
+
+// verifico se la parola_utente è un palindromo
 var parola_palindroma = palindromo(parola_utente);
-console.log(parola_palindroma);
+
+if(parola_palindroma === parola_utente){
+    console.log(parola_palindroma + " è un palindromo");
+}else{
+    console.log("undefined");
+}
 
 
 
 
-// creo una funzione 
+// ----------- FUNCTION -----------------
+// creo una funzione per invertire la parola
 function palindromo(word){
-   var letter = word.length;
-   var total;
-   for(var i = letter; i <= 0; i--){
+   var letter = word.length - 1;
+   var total = "";
+   for(var i = letter; i >= 0; i--){
        var single = letter[i];
        total += single;
-       if(word === total){
-           return total;
-       }else{
-           return undefined;
-       }
    }
+   return total;
 }
