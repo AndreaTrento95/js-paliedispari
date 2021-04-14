@@ -9,9 +9,9 @@ var parola_utente = prompt("Inserisci una parola");
 var parola_palindroma = palindromo(parola_utente);
 
 if(parola_palindroma === parola_utente){
-    console.log(parola_palindroma + " è un palindromo");
+    console.log(parola_palindroma + " è un palindromo!");
 }else{
-    console.log("La parola non è un palindromo");
+    console.log("La parola non è un palindromo!");
 }
 
 
